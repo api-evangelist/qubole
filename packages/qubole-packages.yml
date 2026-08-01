@@ -1,0 +1,36 @@
+generated: '2026-07-20'
+method: searched
+source: PyPI + GitHub qubole org (registry + repo search)
+packages:
+- language: python
+  registry: pypi
+  name: qds-sdk
+  url: https://pypi.org/project/qds-sdk/
+  repo: https://github.com/qubole/qds-sdk-py
+  install: pip install qds-sdk
+  official: true
+  notes: Python SDK for the Qubole Data Service API; ships the `qds.py` command-line tool.
+- language: java
+  registry: github
+  name: qds-sdk-java
+  url: https://github.com/qubole/qds-sdk-java
+  repo: https://github.com/qubole/qds-sdk-java
+  install: build from source (Maven)
+  official: true
+  notes: Java SDK for the Qubole Data Service API. Distributed as source from the qubole GitHub org (not published to Maven Central).
+- language: ruby
+  registry: github
+  name: qds-sdk-ruby
+  url: https://github.com/qubole/qds-sdk-ruby
+  repo: https://github.com/qubole/qds-sdk-ruby
+  install: build from source
+  official: true
+  notes: Ruby SDK for the Qubole Data Service API from the qubole GitHub org.
+- language: python
+  registry: github
+  name: afctl
+  url: https://github.com/qubole/afctl
+  repo: https://github.com/qubole/afctl
+  install: pip install afctl
+  official: true
+  notes: Qubole's Apache Airflow project-management and deployment CLI (complements the core QDS SDK).

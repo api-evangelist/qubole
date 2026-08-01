@@ -1,0 +1,43 @@
+generated: '2026-07-20'
+method: derived
+status: candidate
+source: Derived from documented Qubole Data Service REST API operations (no official MCP server found in docs, npm @modelcontextprotocol, or MCP registries as of 2026-07-20).
+server:
+  name: qubole
+  transport: http
+  url: null
+notes: >-
+  No official or community MCP server for Qubole was found. The tool list below is a
+  CANDIDATE derived from the documented Command/Cluster/Scheduler REST operations,
+  suitable for scaffolding an MCP wrapper over the QDS API (auth: X-AUTH-TOKEN header).
+tools:
+- name: submit_command
+  description: Submit a data command (Hive, Presto, Spark, Hadoop, Pig, shell, DB import/export, notebook).
+  source_operation: POST /api/v1.2/commands
+- name: get_command_status
+  description: Get the status of a submitted command.
+  source_operation: GET /api/v1.2/commands/{id}
+- name: get_command_results
+  description: Retrieve the results of a completed command.
+  source_operation: GET /api/v1.2/commands/{id}/results
+- name: get_command_logs
+  description: Retrieve the logs of a command.
+  source_operation: GET /api/v1.2/commands/{id}/logs
+- name: cancel_command
+  description: Cancel a running command.
+  source_operation: PUT /api/v1.2/commands/{id}
+- name: list_commands
+  description: View the command history.
+  source_operation: GET /api/v1.2/commands
+- name: list_clusters
+  description: List compute clusters.
+  source_operation: GET /api/v2/clusters
+- name: manage_cluster
+  description: Create, update, start, or terminate a cluster.
+  source_operation: POST/PUT /api/v2/clusters
+- name: list_schedules
+  description: List scheduler jobs.
+  source_operation: GET /api/v1.2/scheduler
+- name: create_schedule
+  description: Create a recurring scheduled job.
+  source_operation: POST /api/v1.2/scheduler

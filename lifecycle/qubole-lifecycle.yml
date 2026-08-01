@@ -1,0 +1,23 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.qubole.com/en/latest/rest-api/ + https://status.qubole.com/
+versioning:
+  scheme: uri-path
+  current: v2
+  supported: [v1.2, v1.3, v2]
+  docs: https://docs.qubole.com/en/latest/rest-api/
+  notes: Version is embedded in the API path (/api/v1.2/, /api/v1.3/, /api/v2/); support varies by cloud provider.
+deprecation:
+  policy_url: null
+  sunset_header: false
+  notes: No formal, published API deprecation policy or RFC 8594 Sunset/Deprecation header support was found.
+sla:
+  url: null
+  uptime_target: null
+status_page: https://status.qubole.com/
+status_page_state_observed: All Systems Operational
+deprecated_operations: []
+notes: >-
+  Qubole publishes a public status page (status.qubole.com) and versions its API by
+  URI path. No machine-readable OpenAPI is published, so deprecated operations cannot
+  be derived from a spec.

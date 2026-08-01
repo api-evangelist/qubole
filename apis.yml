@@ -1,9 +1,30 @@
 aid: qubole
 name: Qubole
-description: 'Qubole is a company surfaced as a portfolio company of crv, lightspeed-venture-partners,
-  norwest-venture-partners and added to the API Evangelist network as a stub for enrichment. Sector: data.
-  This profile is a lead awaiting the enrichment pipeline.'
+description: 'Qubole is a cloud-native data lake platform (now part of Idera) that lets
+  teams run multiple open-source data-processing engines - Apache Spark, Presto, Hive,
+  Hadoop, and Airflow - together in a single, cost-optimized, self-managing environment
+  across AWS, Microsoft Azure, Google Cloud Platform, and Oracle Cloud Infrastructure.
+  The Qubole Data Service (QDS) automates cluster provisioning, autoscaling, and spot/preemptible
+  instance management to reduce data-lake costs, and exposes a comprehensive REST API for
+  submitting Hive/Presto/Spark/Hadoop commands, managing clusters, scheduling jobs, running
+  notebooks and dashboards, and administering accounts, users, groups, and roles. First-party
+  SDKs (Python qds-sdk, Java, and Ruby), the qds.py command-line tool, and the afctl Airflow
+  CLI wrap the API. This profile was surfaced as a VC-portfolio lead and enriched by the API
+  Evangelist pipeline against Qubole''s live public documentation and package registries.'
 url: https://raw.githubusercontent.com/api-evangelist/qubole/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://www.qubole.com/wp-content/themes/qubole/assets/images/logo.svg
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
@@ -14,16 +35,108 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
 - Data
-apis: []
+- Data Lake
+- Big Data
+- Analytics
+- Spark
+- Presto
+- Hive
+- Airflow
+- Machine Learning
+- Cloud
+- Data Engineering
+apis:
+- name: Qubole Data Service REST API
+  description: 'The Qubole Data Service (QDS) REST API for submitting and managing data
+    commands (Hive, Presto, Spark, Hadoop, Pig, shell, DB import/export, notebook), managing
+    compute clusters, scheduling recurring jobs, running notebooks and dashboards, and
+    administering accounts, users, groups, and roles. Authenticated with a per-user Qubole
+    API token sent in the X-AUTH-TOKEN header; versioned by URI path (v1.2, v1.3, v2).'
+  humanURL: https://docs.qubole.com/en/latest/rest-api/index.html
+  baseURL: https://api.qubole.com/api/v1.2/
+  tags:
+  - Data
+  - Big Data
+  - Analytics
+  properties:
+  - type: Documentation
+    url: https://docs.qubole.com/en/latest/rest-api/index.html
+  - type: Authentication
+    url: authentication/qubole-authentication.yml
+  - type: Conventions
+    url: conventions/qubole-conventions.yml
+  - type: DataModel
+    url: data-model/qubole-data-model.yml
+  - type: Lifecycle
+    url: lifecycle/qubole-lifecycle.yml
+  - type: Conformance
+    url: conformance/qubole-conformance.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: TrustCenter
+  url: security/qubole-trust-center.yml
+- type: Compliance
+  url: https://www.qubole.com/products/trust
 - type: Website
   url: https://www.qubole.com/
+- type: DeveloperPortal
+  url: https://docs.qubole.com/en/latest/
+- type: Documentation
+  url: https://docs.qubole.com/en/latest/
+- type: APIReference
+  url: https://docs.qubole.com/en/latest/rest-api/index.html
+- type: GettingStarted
+  url: https://docs.qubole.com/en/latest/quick-start-guide/index.html
+- type: Blog
+  url: https://www.qubole.com/blog
+- type: Pricing
+  url: https://www.qubole.com/qubole-pricing
+- type: SignUp
+  url: https://us.qubole.com/users/sign_in
+- type: Support
+  url: https://www.qubole.com/company/contact-us
+- type: TermsOfService
+  url: https://us.qubole.com/TOS.html
+- type: PrivacyPolicy
+  url: https://www.qubole.com/privacy-policy
+- type: GitHubOrganization
+  url: https://github.com/qubole
+- type: StatusPage
+  url: https://status.qubole.com/
+- type: Packages
+  url: packages/qubole-packages.yml
+- type: SDKs
+  url: packages/qubole-packages.yml
+- type: CLI
+  url: cli/qubole-cli.yml
+- type: Authentication
+  url: authentication/qubole-authentication.yml
+- type: Conventions
+  url: conventions/qubole-conventions.yml
+- type: DataModel
+  url: data-model/qubole-data-model.yml
+- type: Lifecycle
+  url: lifecycle/qubole-lifecycle.yml
+- type: Conformance
+  url: conformance/qubole-conformance.yml
+- type: WellKnown
+  url: well-known/qubole-well-known.yml
+- type: MCPServer
+  url: mcp/qubole-mcp.yml
+- type: LLMsTxt
+  url: llms/qubole-llms.txt
+- type: DomainSecurity
+  url: security/qubole-domain-security.yml
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 12
+  pass: local-v1

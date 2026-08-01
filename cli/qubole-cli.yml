@@ -1,0 +1,34 @@
+generated: '2026-07-20'
+method: searched
+source: https://github.com/qubole/qds-sdk-py + https://docs.qubole.com/en/latest/
+clis:
+- name: qds.py
+  ships_with: qds-sdk (Python SDK)
+  install: pip install qds-sdk
+  repo: https://github.com/qubole/qds-sdk-py
+  auth: Reads the Qubole API token from the QDS_API_TOKEN environment variable or --token flag.
+  description: >-
+    Official command-line tool for the Qubole Data Service, installed alongside the
+    Python SDK. Wraps the QDS REST API for submitting and managing commands, clusters,
+    scheduler jobs, accounts, and more.
+  command_groups:
+  - name: hivecmd / prestocmd / sparkcmd / hadoopcmd / pigcmd / shellcmd / dbtapquerycmd / dbexportcmd / dbimportcmd
+    purpose: Submit, check status, cancel, and fetch results/logs for data commands by engine.
+  - name: cluster
+    purpose: Create, list, update, start, terminate, and inspect compute clusters.
+  - name: scheduler
+    purpose: Create and manage recurring scheduled jobs.
+  - name: account
+    purpose: Manage account settings and credentials.
+  - name: report
+    purpose: Retrieve usage and canvas reports.
+  - name: dbtap / hivemetadata / app
+    purpose: Manage data stores, Hive metadata, and Spark apps.
+- name: afctl
+  ships_with: afctl (standalone)
+  install: pip install afctl
+  repo: https://github.com/qubole/afctl
+  description: >-
+    Qubole's Apache Airflow project-management CLI for initializing, generating,
+    testing, and deploying Airflow projects. Complements the core QDS tooling.
+notes: The CLI binaries are catalogued in packages/qubole-packages.yml; this artifact captures their command surface.

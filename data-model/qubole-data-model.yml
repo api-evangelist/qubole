@@ -1,0 +1,75 @@
+generated: '2026-07-20'
+method: derived
+source: https://docs.qubole.com/en/latest/rest-api/ (documented resources; no OpenAPI published)
+notes: >-
+  Entity graph derived from the documented QDS REST resources and the qds-sdk-py
+  resource classes. No machine-readable OpenAPI is published, so relationships are
+  inferred from the documented resource hierarchy and API paths rather than from
+  schema $ref links.
+entities:
+- name: Account
+  path: /account
+  description: The Qubole account (tenant); root of ownership for clusters, users, and commands.
+- name: User
+  path: /users
+  description: A member of an account, holder of an API token.
+- name: Group
+  path: /groups
+  description: A collection of users for role assignment.
+- name: Role
+  path: /roles
+  description: A named set of permissions (object policies) assigned to groups.
+- name: Cluster
+  path: /clusters  # v1.3 / v2 (clusters)
+  description: A managed compute cluster (Spark/Presto/Hadoop/Hive engine) that executes commands.
+- name: Command
+  path: /commands
+  description: A submitted data job (Hive, Presto, Spark, Hadoop, Pig, shell, DB import/export, notebook); asynchronous with status, results, and logs.
+- name: Schedule
+  path: /scheduler
+  description: A recurring schedule that submits commands on a cadence.
+- name: Notebook
+  path: /notebooks
+  description: An interactive notebook document run against a cluster.
+- name: Dashboard
+  path: /dashboards
+  description: A saved dashboard built over notebook/command output.
+- name: DbTap
+  path: /db_taps
+  description: A configured connection to an external database used by DB import/export/query commands.
+- name: App
+  path: /apps
+  description: A Spark application definition.
+relationships:
+- from: Cluster
+  to: Account
+  type: belongs_to
+  via: account
+- from: Command
+  to: Cluster
+  type: belongs_to
+  via: label (cluster label)
+- from: Command
+  to: User
+  type: belongs_to
+  via: qbol_user_id
+- from: Schedule
+  to: Command
+  type: has_many
+  via: command
+- from: User
+  to: Group
+  type: has_many
+  via: groups
+- from: Group
+  to: Role
+  type: has_many
+  via: roles
+- from: Notebook
+  to: Cluster
+  type: belongs_to
+  via: cluster
+- from: Command
+  to: DbTap
+  type: belongs_to
+  via: db_tap_id

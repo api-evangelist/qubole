@@ -1,0 +1,57 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.qubole.com/en/latest/rest-api/ + github.com/qubole/qds-sdk-py
+authentication:
+  style: api-key-header
+  header: X-AUTH-TOKEN
+  ref: authentication/qubole-authentication.yml
+base_url:
+  pattern: https://<endpoint-host>/api/${V}/
+  default_host: api.qubole.com
+  versions: [v1.2, v1.3, v2]
+  regional_hosts:
+  - https://api.qubole.com/api/${V}/       # AWS (default / legacy)
+  - https://us.qubole.com/api/${V}/        # AWS US
+  - https://eu-central-1.qubole.com/api/${V}/  # AWS EU
+  - https://in.qubole.com/api/${V}/        # AWS India
+  - https://wellness.qubole.com/${V}       # AWS HIPAA-compliant
+  - https://azure.qubole.com/api/${V}/     # Microsoft Azure (v2)
+  - https://gcp.qubole.com/api/${V}/       # Google Cloud Platform
+  - https://gcp-eu.qubole.com/api/${V}/    # GCP EU
+  - https://oraclecloud.qubole.com/api/${V}/  # Oracle Cloud Infrastructure (v2)
+content_type:
+  request: application/json
+  response: application/json
+versioning:
+  style: uri-path
+  values: [v1.2, v1.3, v2]
+  notes: Most AWS APIs are v1.2; Cluster API on AWS is v1.3; Azure/GCP/OCI and newer AWS APIs are v2.
+async_execution:
+  model: submit-then-poll
+  notes: >-
+    Long-running data commands are asynchronous. A command submission (POST /commands)
+    returns a command id and status; clients poll GET /commands/{id} until the status
+    is terminal (done/error/cancelled), then fetch results (GET /commands/{id}/results)
+    and logs (GET /commands/{id}/logs). No webhook/callback event surface is published.
+request_tracing:
+  response_header: X-Qubole-Trace-Id
+  notes: Responses carry an X-Qubole-Trace-Id header for support/debugging (handled by the SDKs).
+idempotency:
+  supported: false
+  notes: No documented idempotency-key mechanism.
+pagination:
+  style: page-based
+  notes: >-
+    List endpoints (e.g. command history, scheduler) accept page/per_page query
+    parameters; the SDK iterates pages via page attributes on list resources.
+rate_limiting:
+  notes: No published numeric rate-limit contract; standard HTTP 429 handling applies.
+error_envelope:
+  notes: >-
+    Errors are returned with standard HTTP status codes and a JSON body; a failed
+    command surfaces its failure via the command object status field and error logs
+    endpoint rather than a distinct problem+json envelope.
+cross_links:
+  authentication: authentication/qubole-authentication.yml
+  lifecycle: lifecycle/qubole-lifecycle.yml
+  data_model: data-model/qubole-data-model.yml
