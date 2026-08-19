@@ -1,15 +1,15 @@
 generated: '2026-07-20'
 method: derived
 status: candidate
-source: Derived from documented Qubole Data Service REST API operations (no official MCP server found in docs, npm @modelcontextprotocol, or MCP registries as of 2026-07-20).
+source: Derived from documented Qubole Data Service REST API operations (no official MCP server found
+  in docs, npm @modelcontextprotocol, or MCP registries as of 2026-07-20).
 server:
   name: qubole
   transport: http
   url: null
-notes: >-
-  No official or community MCP server for Qubole was found. The tool list below is a
-  CANDIDATE derived from the documented Command/Cluster/Scheduler REST operations,
-  suitable for scaffolding an MCP wrapper over the QDS API (auth: X-AUTH-TOKEN header).
+notes: 'No official or community MCP server for Qubole was found. The tool list below is a CANDIDATE derived
+  from the documented Command/Cluster/Scheduler REST operations, suitable for scaffolding an MCP wrapper
+  over the QDS API (auth: X-AUTH-TOKEN header).'
 tools:
 - name: submit_command
   description: Submit a data command (Hive, Presto, Spark, Hadoop, Pig, shell, DB import/export, notebook).
@@ -41,3 +41,9 @@ tools:
 - name: create_schedule
   description: Create a recurring scheduled job.
   source_operation: POST /api/v1.2/scheduler
+deployment:
+  mode: none
+  verified: derived
+  tools: 10
+  checked: '2026-08-12'
+  source: catalog MCP census
