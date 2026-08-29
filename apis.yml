@@ -12,6 +12,17 @@ description: 'Qubole is a cloud-native data lake platform (now part of Idera) th
   CLI wrap the API. This profile was surfaced as a VC-portfolio lead and enriched by the API
   Evangelist pipeline against Qubole''s live public documentation and package registries.'
 url: https://raw.githubusercontent.com/api-evangelist/qubole/refs/heads/main/apis.yml
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: self-serve
