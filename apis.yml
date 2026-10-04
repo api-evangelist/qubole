@@ -58,7 +58,7 @@ tags:
 - Presto
 - Hive
 - Airflow
-- Machine-Learning
+- Machine Learning
 - Cloud
 - Data Engineering
 tags_raw:
@@ -74,6 +74,7 @@ tags_raw:
 - Machine Learning
 - Cloud
 - Data Engineering
+- Machine-Learning
 apis:
 - name: Qubole Data Service REST API
   description: 'The Qubole Data Service (QDS) REST API for submitting and managing data
