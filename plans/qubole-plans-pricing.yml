@@ -1,0 +1,44 @@
+# Pricing transcribed from the provider's own page — see provenance. Numbers are quoted, not derived.
+generated: '2026-10-07'
+method: searched
+source: https://www.qubole.com/qubole-pricing
+sources:
+- https://www.qubole.com/qubole-pricing
+provenance:
+  tool: all/0-working/economics/harvest_pricing.py
+  run: 20261007T104522
+  grounding: every price_text was found verbatim in the fetched page text
+audience: business-product
+pricing_basis: usage-other
+delivery:
+  delivery: managed
+  method: page
+  read: '2026-10-07'
+  managed_tier: Enterprise Edition
+published: true
+note: Pricing page lists free 30-day trial plus two QCU-hour based plans; both paid plans say 'Contact
+  Sales'. User fees of $108/user per month noted for On-Demand.
+plan_count: 3
+plans:
+- name: Free Trial
+  price_text: '0'
+  price: 0
+  period: none
+  included_quota: Full-Featured trial for 30 Days; Connect to your own data; Connect to the cloud of your
+    choice
+- name: Enterprise Edition
+  price_text: 0.168 per QCU* per hr**
+  price: 0.168
+  period: per-use
+  unit: QCU per hour
+  included_quota: Workload Aware, Autoscaling and Spot Management; Qubole Cost Explorer to manage TCO;
+    Adaptive Serverless Architecture; Support Included
+  overage: '*QCU = Qubole Compute Units | **Requires annual contract; excludes user fees'
+- name: On-Demand
+  price_text: 0.24 per QCU* per hr**
+  price: 0.24
+  period: per-use
+  unit: QCU per hour
+  included_quota: Workload Aware, Autoscaling and Spot Management; Qubole Cost Explorer to manage TCO;
+    Adaptive Serverless Architecture; Support Included
+  overage: '**excludes user fees of $108/user per month'
