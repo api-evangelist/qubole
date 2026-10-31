@@ -64,6 +64,111 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Qubole is a company surfaced as a portfolio company of crv, lightspeed-venture-partners, norwest-venture-partners and added to the API Evangelist network as a stub for enrichment. Sector: data. This profile is a lead awaiting the enrichment pipeline.
+Qubole is a cloud-native data lake platform (now part of Idera) that lets teams run multiple open-source data-processing engines - Apache Spark, Presto, Hive, Hadoop, and Airflow - together in a single, cost-optimized, self-managing environment across AWS, Microsoft Azure, Google Cloud Platform, and Oracle Cloud Infrastructure. The Qubole Data Service (QDS) automates cluster provisioning, autoscaling, and spot/preemptible instance management to reduce data-lake costs, and exposes a comprehensive REST API for submitting Hive/Presto/Spark/Hadoop commands, managing clusters, scheduling jobs, running notebooks and dashboards, and administering accounts, users, groups, and roles. First-party SDKs (Python qds-sdk, Java, and Ruby), the qds.py command-line tool, and the afctl Airflow CLI wrap the API. This profile was surfaced as a VC-portfolio lead and enriched by the API Evangelist pipeline against Qubole's live public documentation and package registries.
 
-Backed by: crv, lightspeed-venture-partners, norwest-venture-partners — https://www.qubole.com/
+**Areas:** Company · Data · Data Lake · Big Data · Analytics · Spark · Presto · Hive · Airflow · Machine Learning · Cloud · Data Engineering
+
+## Qubole on APIs.io
+
+Everything profiled for Qubole is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/qubole/](https://apis.io/providers/qubole/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [Qubole Data Service REST API](https://apis.io/apis/qubole/qubole-data-service-rest-api/) — The Qubole Data Service (QDS) REST API for submitting and managing data commands (Hive, Presto, Spark, Hadoop, Pig, shell, DB import/export, notebook),…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [qubole](https://apis.io/servers/qubole/qubole/)
+
+#### Security (3)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Qubole Authentication](https://apis.io/security/qubole/qubole-authentication/)
+- [Qubole Domain Security](https://apis.io/security/qubole/qubole-domain-security/)
+- [Qubole Trust Center](https://apis.io/security/qubole/qubole-trust-center/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Qubole Plans Pricing](https://apis.io/plans/qubole/qubole-plans-pricing/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.qubole.com/)
+- [Documentation](https://docs.qubole.com/en/latest/)
+- [Getting started](https://docs.qubole.com/en/latest/quick-start-guide/index.html)
+- [API reference](https://docs.qubole.com/en/latest/rest-api/index.html)
+- [Pricing](https://www.qubole.com/qubole-pricing)
+- [Sign up](https://us.qubole.com/users/sign_in)
+- [Support](https://www.qubole.com/company/contact-us)
+- [Blog](https://www.qubole.com/blog)
+- [Compliance](https://www.qubole.com/products/trust)
+- [Terms of service](https://us.qubole.com/TOS.html)
+- [Privacy policy](https://www.qubole.com/privacy-policy)
+- [GitHub](https://github.com/qubole)
+- [Status](https://status.qubole.com/)
+
+## API Evangelist rating
+
+**Kin Score 44.8** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 0.0 |
+| Contract governance | 4.5 |
+| Operational transparency | 18.4 |
+| Developer ergonomics | 71.4 |
+| Access clarity | 92.1 |
+
+**Agent readiness 2.5** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+
+**Regulatory alignment 27.3** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/qubole/](https://apis.io/providers/qubole/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Qubole: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/qubole/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
